@@ -19,13 +19,10 @@ app.use(express.json());
 //using routes
 app.use(require('./routes/Route'));
 
-//home function
-
-function home (req,res)
+app.get('/',(req,res)=>
 {
-    res.send("Welcome to Expense Tracker");
-}
-
+    res.status(200).send('WELCOME TO EXPENSES TRACKER APPLICATION');
+});
 //port
 const port=process.env.PORT||3000;
 app.listen(port,()=>
