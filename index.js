@@ -13,7 +13,12 @@ db();
 
 //middleware
 
-app.use(cors());
+
+
+app.use(cors({
+    origin:"*",
+    credentials:true
+  }));
 app.use(express.json());
 
 //using routes
