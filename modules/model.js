@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 //categories
 const categories_model = new Schema({
-  type: { type: String, default: "Investment" },
+  type: { type: String },
   color: { type: String, default: "#FCBE44" },
 });
 
@@ -11,7 +11,7 @@ const categories_model = new Schema({
 
 const transation_model = new Schema({
   name: { type: String, default: "Anonymous" },
-  type: { type: String, default: "Investment" },
+  type: { type: String },
   amount: { type: Number },
   date: { type: Date, default: Date.now },
 });
